@@ -1,0 +1,6 @@
+# Artifacts
+build
+node_modules
+dist
+*.sh
+tsconfig.json

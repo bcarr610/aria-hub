@@ -1,7 +1,8 @@
 # Parts
 ## Required
-- Raspberry Pi 4
-- 5v DC Power Supply
+- Raspberry Pi 3B+
+- 5v DC Micro USB Power Supply
+- 32GB Micro SD Card
 
 ## Optional
 - HDMI Screen

@@ -4,16 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:client": "node esbuild-config/client.dev.mjs",
+    "watch:server": "node esbuild-config/server.dev.mjs",
+    "watch:restart-server": "nodemon --config nodemon.json",
+    "dev": "npm-run-all --parallel watch:*",
+    "build:client": "node esbuild-config/client.prod.mjs",
+    "build:server": "node esbuild-config/server.prod.mjs",
+    "build": "npm-run-all --sequential build:*",
+    "start": "nodemon build/server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.25",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "esbuild": "^0.20.1",
+    "esbuild-sass-plugin": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.71.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "express": "^4.18.3"
+    "nodemon": "^3.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
